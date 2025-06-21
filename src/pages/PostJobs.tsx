@@ -54,7 +54,7 @@ const PostJobs = () => {
         benefits: [], // Simplified
       };
 
-      await jobService.createJobWithoutAuth(jobData);
+      await jobService.createJob(jobData);
       setSuccess(true);
       
       setTimeout(() => {

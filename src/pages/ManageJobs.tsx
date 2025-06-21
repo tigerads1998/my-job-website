@@ -144,10 +144,15 @@ const ManageJobs = () => {
         is_active: form.is_active,
       };
 
-      if (editDialog.job) { // Editing existing job
-        await jobService.updateJob(editDialog.job.id, dataToSave);
-      } else { // Creating new job
-        await jobService.createJobWithoutAuth(dataToSave as CreateJobData);
+      if (editDialog.job) {
+        // Logic to either create or update
+        if (editDialog.job.id === 'new') {
+          // Create new job
+          await jobService.createJob(dataToSave as CreateJobData);
+        } else {
+          // Update existing job
+          await jobService.updateJob(editDialog.job.id, dataToSave);
+        }
       }
       setSuccess(`Job ${editDialog.job ? 'updated' : 'created'} successfully!`);
       handleCloseEdit();
