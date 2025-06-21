@@ -475,15 +475,11 @@ const Jobs = () => {
                       sx={{ fontSize: '0.75rem' }}
                     />
                     {job.work_model && (
-                      <Chip 
-                        label={job.work_model.charAt(0).toUpperCase() + job.work_model.slice(1)} 
-                        size="small" 
-                        sx={{
-                          fontSize: '0.75rem',
-                          backgroundColor: '#ffc107',
-                          color: 'black',
-                          fontWeight: 500
-                        }}
+                      <Chip
+                        label={job.work_model.charAt(0).toUpperCase() + job.work_model.slice(1)}
+                        size="small"
+                        variant="outlined"
+                        sx={{ fontSize: '0.75rem' }}
                       />
                     )}
                      <Chip
@@ -571,13 +567,9 @@ const Jobs = () => {
                       color="primary"
                     />
                     {selectedJob.work_model && (
-                      <Chip 
-                        label={selectedJob.work_model.charAt(0).toUpperCase() + selectedJob.work_model.slice(1)} 
-                        sx={{
-                          backgroundColor: '#ffc107',
-                          color: 'black',
-                          fontWeight: 600
-                        }}
+                      <Chip
+                        label={selectedJob.work_model.charAt(0).toUpperCase() + selectedJob.work_model.slice(1)}
+                        variant="outlined"
                       />
                     )}
                     <Chip
