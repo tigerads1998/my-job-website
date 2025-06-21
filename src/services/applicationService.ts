@@ -1,12 +1,12 @@
-import { supabaseLocal as supabase } from '../supabase-local'
-import { Application } from '../supabase-local'
+import { supabase } from '../supabase'
+import { Application } from '../supabase'
 import { createClient } from '@supabase/supabase-js'
 import { mockApplicationService } from './mockApplicationService'
 
-// Create admin client to bypass RLS for guest applications (Local)
+// Create admin client to bypass RLS for guest applications (Cloud)
 const adminSupabase = createClient(
-  'http://localhost:54321',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU'
+  process.env.REACT_APP_SUPABASE_URL!,
+  process.env.REACT_APP_SUPABASE_ANON_KEY!
 )
 
 // Connection test function
