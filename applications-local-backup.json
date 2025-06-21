@@ -1,0 +1,17 @@
+[
+  {
+    "id": "5f5785fe-6a7a-4bf3-abba-76504b6ed3a6",
+    "job_id": "378267b5-6bff-4aa5-a566-315ed8baa439",
+    "user_id": null,
+    "cover_letter": "Hello",
+    "resume_url": null,
+    "status": "pending",
+    "created_at": "2025-06-21T01:16:18.67527+00:00",
+    "updated_at": "2025-06-21T01:16:18.67527+00:00",
+    "name": "UniqlJobs",
+    "email": "tigerads1998@gmail.com",
+    "linkedin_profile": "",
+    "job_title": "Cloud Engineer",
+    "company": "CloudTrend Innovations"
+  }
+]
