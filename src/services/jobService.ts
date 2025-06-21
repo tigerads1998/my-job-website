@@ -142,22 +142,51 @@ export const jobService = {
     }
   },
 
-  // Create new job (requires authentication)
+  // Create new job (allows guest posting)
   async createJob(jobData: CreateJobData): Promise<Job> {
-    const { data: { user } } = await supabase.auth.getUser()
-    if (!user) throw new Error('User not authenticated')
+    try {
+      const isConnected = await testConnection()
+      
+      if (!isConnected) {
+        console.log('Using mock job service due to connection issues')
+        return await mockJobService.createJob(jobData)
+      }
 
-    const { data, error } = await supabase
-      .from('jobs')
-      .insert({
+      // Get current user (optional)
+      const { data: { user } } = await supabase.auth.getUser()
+      
+      const insertData = {
         ...jobData,
-        employer_id: user.id
-      })
-      .select()
-      .single()
+        employer_id: user?.id || null, // Allow null for guest job posting
+        is_active: true,
+        is_verified: false
+      };
+      
+      console.log('📝 Creating job with data:', insertData);
+      
+      const { data, error } = await supabase
+        .from('jobs')
+        .insert(insertData)
+        .select()
+        .single()
 
-    if (error) throw error
-    return data
+      if (error) {
+        console.error('❌ Job creation failed:', error);
+        throw new Error(error.message || 'Failed to create job. Please try again.');
+      }
+      
+      console.log('✅ Job created successfully:', data.id);
+      return data
+    } catch (error: any) {
+      // If it's a connection error, use mock
+      if (error.message?.includes('fetch') || error.message?.includes('network')) {
+        console.warn('Network error, using mock job service:', error)
+        return await mockJobService.createJob(jobData)
+      }
+      
+      // Re-throw other errors (like validation errors)
+      throw error
+    }
   },
 
   // Update job

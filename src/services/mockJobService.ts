@@ -373,6 +373,34 @@ const mockJobs: Job[] = [
 ];
 
 export const mockJobService = {
+  async createJob(jobData: any): Promise<Job> {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    // Simulate successful job creation
+    const mockJob: Job = {
+      id: `mock-job-${Date.now()}`,
+      title: jobData.title,
+      company: jobData.company,
+      location: jobData.location,
+      type: jobData.type,
+      work_model: jobData.work_model || 'on-site',
+      salary_min: jobData.salary_min,
+      salary_max: jobData.salary_max,
+      description: jobData.description,
+      requirements: jobData.requirements || [],
+      benefits: jobData.benefits || [],
+      is_verified: jobData.is_verified || false,
+      is_active: true,
+      employer_id: 'mock-employer',
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    }
+    
+    console.log('✅ Mock job created successfully:', mockJob.id)
+    return mockJob
+  },
+
   async getJobs(filters?: any): Promise<Job[]> {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 500));
