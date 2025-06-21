@@ -1,0 +1,30 @@
+{
+  "title": "Senior Frontend Developer",
+  "company": "TechFlow Innovations",
+  "location": "San Francisco, CA",
+  "type": "full-time",
+  "work_model": "hybrid",
+  "salary_min": 1800,
+  "salary_max": 2700,
+  "description": "<div class=\"job-description\" style=\"line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, sans-serif;\">\n<div style=\"margin-bottom: 24px;\">\n<h3 style=\"margin: 0 0 12px 0; font-size: 1.2rem; color: #1a202c; font-weight: 600;\">About the Role</h3>\n<p style=\"margin: 0; color: #4a5568; font-size: 0.95rem;\">We are seeking a talented Senior Frontend Developer to join our growing engineering team. You will work on cutting-edge web applications, collaborating closely with our design and backend teams to deliver exceptional user experiences.</p>\n</div>\n<div style=\"margin-bottom: 24px;\">\n<h3 style=\"margin: 0 0 12px 0; font-size: 1.2rem; color: #1a202c; font-weight: 600;\">Key Responsibilities</h3>\n<ul style=\"margin: 0; padding-left: 18px; color: #4a5568; font-size: 0.95rem;\">\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Develop and maintain responsive web applications using React and TypeScript</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Collaborate with UX/UI designers to implement pixel-perfect designs</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Optimize applications for maximum speed and scalability</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Write clean, maintainable code with comprehensive testing</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Mentor junior developers and participate in code reviews</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Stay up-to-date with the latest frontend technologies and best practices</li>\n</ul>\n</div>\n<div style=\"margin-bottom: 24px;\">\n<h3 style=\"margin: 0 0 12px 0; font-size: 1.2rem; color: #1a202c; font-weight: 600;\">Required Qualifications</h3>\n<ul style=\"margin: 0; padding-left: 18px; color: #4a5568; font-size: 0.95rem;\">\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Bachelor's degree in Computer Science or equivalent experience</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">5+ years of professional frontend development experience</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Expert-level proficiency in React, JavaScript, and TypeScript</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Strong experience with modern CSS frameworks (Tailwind, Material-UI, etc.)</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Experience with state management libraries (Redux, Zustand, etc.)</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Proficiency with version control systems (Git)</li>\n</ul>\n</div>\n<div style=\"margin-bottom: 24px;\">\n<h3 style=\"margin: 0 0 12px 0; font-size: 1.2rem; color: #1a202c; font-weight: 600;\">Preferred Qualifications</h3>\n<ul style=\"margin: 0; padding-left: 18px; color: #4a5568; font-size: 0.95rem;\">\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Experience with Next.js and server-side rendering</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Knowledge of GraphQL and modern API integration</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Experience with testing frameworks (Jest, Cypress, etc.)</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Understanding of web performance optimization techniques</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Experience with CI/CD pipelines and deployment processes</li>\n</ul>\n</div>\n<div style=\"margin-bottom: 24px;\">\n<h3 style=\"margin: 0 0 12px 0; font-size: 1.2rem; color: #1a202c; font-weight: 600;\">Benefits & Perks</h3>\n<ul style=\"margin: 0; padding-left: 18px; color: #4a5568; font-size: 0.95rem;\">\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Comprehensive health, dental, and vision insurance</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Flexible PTO and paid holidays</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Professional development budget ($3,000/year)</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Remote work flexibility with hybrid options</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">401(k) with generous company matching</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Stock options and equity participation</li>\n<li style=\"margin-bottom: 6px; line-height: 1.5;\">Modern office with free meals and snacks</li>\n</ul>\n</div>\n<div style=\"padding: 16px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #3182ce;\">\n<p style=\"margin: 0; color: #2d3748; font-size: 0.9rem; font-weight: 500;\">📍 San Francisco, CA • 💼 Full-time • 🏢 Hybrid • 💰 $1,800-2,700/month</p>\n</div>\n</div>",
+  "requirements": [
+    "Bachelor's degree in Computer Science or equivalent experience",
+    "5+ years of professional frontend development experience", 
+    "Expert-level proficiency in React, JavaScript, and TypeScript",
+    "Strong experience with modern CSS frameworks (Tailwind, Material-UI, etc.)",
+    "Experience with state management libraries (Redux, Zustand, etc.)",
+    "Proficiency with version control systems (Git)",
+    "Strong problem-solving skills and attention to detail",
+    "Excellent communication and teamwork abilities"
+  ],
+  "benefits": [
+    "Comprehensive health, dental, and vision insurance",
+    "Flexible PTO and paid holidays", 
+    "Professional development budget ($3,000/year)",
+    "Remote work flexibility with hybrid options",
+    "401(k) with generous company matching",
+    "Stock options and equity participation",
+    "Modern office with free meals and snacks",
+    "Learning stipend for courses and conferences"
+  ]
+} 

@@ -1,0 +1,29 @@
+{
+  "id": "UNIQUE-JOB-ID-12345",
+  "title": "Senior Backend Engineer",
+  "company": "Innovatech Solutions Inc.",
+  "location": "San Francisco, CA",
+  "type": "full-time",
+  "level": "senior",
+  "work_model": "remote",
+  "salary_min": 120000,
+  "salary_max": 160000,
+  "description": "<h3>Job Summary</h3><p>We are seeking an experienced Senior Backend Engineer to join our innovative team. You will be responsible for designing, developing, and maintaining the server-side of our cutting-edge applications, ensuring high performance and responsiveness to requests from the front-end.</p><br><h3>Key Responsibilities</h3><ul><li>Design and build scalable RESTful APIs for our web and mobile applications.</li><li>Optimize applications for maximum speed, scalability, and security.</li><li>Collaborate with front-end developers and product managers to deliver high-quality features.</li><li>Write clean, maintainable, and well-documented code.</li><li>Mentor junior engineers and contribute to a culture of technical excellence.</li></ul><br><h3>Qualifications</h3><ul><li>5+ years of professional experience in backend development.</li><li>Strong proficiency in a major backend language (e.g., Node.js, Python, Go, or Java).</li><li>Extensive experience with database technologies like PostgreSQL, MongoDB, or Redis.</li><li>Experience with cloud platforms (AWS, Google Cloud, or Azure).</li><li>Solid understanding of data structures, algorithms, and system design.</li></ul>",
+  "requirements": [
+    "5+ years of backend development experience",
+    "Proficiency in Node.js or Python",
+    "Experience with cloud services (AWS preferred)",
+    "Strong knowledge of SQL and NoSQL databases",
+    "Excellent problem-solving and communication skills",
+    "Bachelor's degree in Computer Science or a related field"
+  ],
+  "benefits": [
+    "Competitive salary and stock options",
+    "Comprehensive health, dental, and vision insurance",
+    "Unlimited Paid Time Off (PTO)",
+    "Flexible remote work policy",
+    "Annual budget for professional development",
+    "Home office setup stipend"
+  ],
+  "verified": true
+} 
