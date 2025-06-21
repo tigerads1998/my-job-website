@@ -480,17 +480,22 @@ const Jobs = () => {
                         size="small" 
                         sx={{
                           fontSize: '0.75rem',
-                          backgroundColor: 'grey.700',
-                          color: 'white',
+                          backgroundColor: '#ffc107',
+                          color: 'black',
+                          fontWeight: 500
                         }}
                       />
                     )}
+                     <Chip
+                      icon={<CalendarMonthIcon sx={{ fontSize: 16, color: '#e53935 !important' }} />}
+                      label={formatPostedDate(job.created_at)}
+                      size="small"
+                      variant="outlined"
+                       sx={{ fontSize: '0.75rem' }}
+                    />
                   </Stack>
                   
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1.5 }}>
-                    <Typography variant="caption" color="text.secondary">
-                      {formatPostedDate(job.created_at)}
-                    </Typography>
+                  <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', mt: 1.5 }}>
                     <Button
                       variant="outlined"
                       size="small"
@@ -569,8 +574,9 @@ const Jobs = () => {
                       <Chip 
                         label={selectedJob.work_model.charAt(0).toUpperCase() + selectedJob.work_model.slice(1)} 
                         sx={{
-                          backgroundColor: 'grey.700',
-                          color: 'white',
+                          backgroundColor: '#ffc107',
+                          color: 'black',
+                          fontWeight: 600
                         }}
                       />
                     )}
@@ -602,14 +608,6 @@ const Jobs = () => {
                 </Button>
               </Box>
               
-              <Stack direction="row" spacing={1.5} sx={{ mb: 2.5, flexWrap: 'wrap', gap: 1 }}>
-                <Chip
-                  icon={<CalendarMonthIcon sx={{ color: '#e53935 !important' }} />}
-                  label={formatPostedDate(selectedJob.created_at)}
-                  variant="outlined"
-                />
-              </Stack>
-
               <Divider sx={{ my: 2.5 }} />
 
               <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}>
