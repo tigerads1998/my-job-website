@@ -1,8 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
 
-// Use environment variables for production, fallback to local for development
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || 'http://localhost:54321'
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU'
+// Use environment variables for production.
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
+const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error('Supabase URL and Anon Key are required. Check your .env file or Netlify environment variables.');
+}
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
