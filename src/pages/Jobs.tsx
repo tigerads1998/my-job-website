@@ -459,11 +459,31 @@ const Jobs = () => {
                     {job.description.replace(/<[^>]*>/g, '').substring(0, 120)}...
                   </Typography>
 
-                  <Stack direction="row" spacing={1} sx={{ mt: 1.5 }}>
-                    <Chip icon={<LocationOnIcon />} label={formatLocation(job.location)} size="small" />
-                    <Chip icon={<WorkIcon />} label={formatWorkType(job.type)} size="small" variant="outlined" />
+                  <Stack direction="row" spacing={1} sx={{ mt: 1.5, flexWrap: 'wrap', gap: 0.5 }}>
+                    <Chip 
+                      icon={<LocationOnIcon sx={{ fontSize: 16, color: '#e53935 !important' }} />} 
+                      label={formatLocation(job.location)} 
+                      size="small" 
+                      variant="outlined"
+                      sx={{ fontSize: '0.75rem' }}
+                    />
+                    <Chip 
+                      icon={<WorkIcon sx={{ fontSize: 16 }} />} 
+                      label={formatWorkType(job.type)} 
+                      size="small" 
+                      variant="outlined" 
+                      sx={{ fontSize: '0.75rem' }}
+                    />
                     {job.work_model && (
-                      <Chip label={job.work_model.charAt(0).toUpperCase() + job.work_model.slice(1)} size="small" color="secondary" />
+                      <Chip 
+                        label={job.work_model.charAt(0).toUpperCase() + job.work_model.slice(1)} 
+                        size="small" 
+                        sx={{
+                          fontSize: '0.75rem',
+                          backgroundColor: 'grey.700',
+                          color: 'white',
+                        }}
+                      />
                     )}
                   </Stack>
                   
@@ -532,12 +552,33 @@ const Jobs = () => {
                   <Typography variant="h6" color="text.secondary" sx={{ mb: 1.5, fontSize: '1rem' }}>
                     {selectedJob.company}
                   </Typography>
-                  <Stack direction="row" spacing={1}>
-                    <Chip icon={<LocationOnIcon />} label={formatLocation(selectedJob.location)} />
-                    <Chip icon={<WorkIcon />} label={formatWorkType(selectedJob.type)} variant="outlined" />
+                  <Stack direction="row" spacing={1.5} sx={{ mb: 2.5, flexWrap: 'wrap', gap: 1 }}>
+                    <Chip 
+                      icon={<LocationOnIcon sx={{ color: '#e53935 !important' }} />} 
+                      label={formatLocation(selectedJob.location)} 
+                      variant="filled"
+                      color="default"
+                    />
+                    <Chip 
+                      icon={<WorkIcon />} 
+                      label={formatWorkType(selectedJob.type)} 
+                      variant="filled"
+                      color="primary"
+                    />
                     {selectedJob.work_model && (
-                      <Chip label={selectedJob.work_model.charAt(0).toUpperCase() + selectedJob.work_model.slice(1)} color="secondary" />
+                      <Chip 
+                        label={selectedJob.work_model.charAt(0).toUpperCase() + selectedJob.work_model.slice(1)} 
+                        sx={{
+                          backgroundColor: 'grey.700',
+                          color: 'white',
+                        }}
+                      />
                     )}
+                    <Chip
+                      icon={<CalendarMonthIcon sx={{ color: '#e53935 !important' }} />}
+                      label={formatPostedDate(selectedJob.created_at)}
+                      variant="outlined"
+                    />
                   </Stack>
                 </Box>
                 <Button 
