@@ -1,22 +1,11 @@
-import { supabaseLocal as supabase, WorkModel } from '../supabase-local'
-import { Job } from '../supabase-local'
-import { createClient } from '@supabase/supabase-js'
+import { supabase } from '../supabase'
+import { Job, WorkModel } from '../supabase'
 import { mockJobService } from './mockJobService'
-
-// Admin client with service_role key for operations that need to bypass RLS (Local)
-const adminSupabase = createClient(
-  'http://localhost:54321',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImV4cCI6MTk4MzgxMjk5Nn0.EGIM96RAZx35lJzdJsyH-qQwv8Hdp7fsn3W0YpN81IU'
-)
 
 // Connection test function
 async function testConnection(): Promise<boolean> {
   try {
-    const { data, error } = await supabase
-      .from('jobs')
-      .select('id')
-      .limit(1)
-    
+    const { data, error } = await supabase.from('jobs').select('id').limit(1)
     return !error && data !== null
   } catch (error) {
     console.warn('Supabase connection failed, using mock data:', error)
@@ -171,27 +160,9 @@ export const jobService = {
     return data
   },
 
-  // Create new job without authentication (for internal use)
-  async createJobWithoutAuth(jobData: CreateJobData): Promise<Job> {
-    const { data, error } = await adminSupabase
-      .from('jobs')
-      .insert({
-        ...jobData,
-        is_active: true  // Ensure job is active
-      })
-      .select()
-      .single()
-
-    if (error) {
-      console.error('Supabase error:', error);
-      throw error;
-    }
-    return data
-  },
-
   // Update job
   async updateJob(id: string, updates: UpdateJobData): Promise<Job> {
-    const { data, error } = await adminSupabase
+    const { data, error } = await supabase
       .from('jobs')
       .update(updates)
       .eq('id', id)
@@ -202,12 +173,9 @@ export const jobService = {
     return data
   },
 
-  // Delete job - Use admin client to bypass RLS
+  // Delete job
   async deleteJob(id: string) {
-    const { error } = await adminSupabase
-      .from('jobs')
-      .delete()
-      .eq('id', id)
+    const { error } = await supabase.from('jobs').delete().eq('id', id)
 
     if (error) throw error
   },
