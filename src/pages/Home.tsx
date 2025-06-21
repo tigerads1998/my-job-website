@@ -42,7 +42,7 @@ const Home = () => {
       >
         <Container maxWidth="md">
           <Typography variant="h2" component="h1" gutterBottom>
-            Find Your Dream Job
+            Phiên Bản Cloud - Test Xác Nhận
           </Typography>
           <Typography variant="h5" paragraph>
             Search through thousands of job listings
